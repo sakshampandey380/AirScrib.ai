@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-ink font-body text-slate-100 antialiased selection:bg-cyan-400/30 selection:text-cyan-100;
+  background-image:
+    radial-gradient(circle at 15% 12%, rgba(92, 220, 255, 0.1), transparent 24%),
+    radial-gradient(circle at 86% 16%, rgba(255, 210, 120, 0.08), transparent 22%),
+    linear-gradient(180deg, #071425 0%, #07111f 42%, #030915 100%);
+  overflow-x: hidden;
+}
+
+body[data-theme="midnight"] {
+  background-image:
+    radial-gradient(circle at 18% 15%, rgba(156, 93, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(35, 211, 255, 0.12), transparent 26%),
+    linear-gradient(180deg, #050b1a 0%, #030712 50%, #01040a 100%);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+  transition:
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+button:not(:disabled):hover,
+a.rounded-full:hover,
+a.rounded-2xl:hover {
+  transform: translateY(-1.5px);
+}
+
+button:not(:disabled):active,
+a.rounded-full:active,
+a.rounded-2xl:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+select option {
+  background-color: #071120;
+  color: #f1f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 9, 21, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(35, 211, 255, 0.55), rgba(127, 62, 255, 0.55));
+  border-radius: 999px;
+}
+
+.glass-panel {
+  @apply rounded-[24px] sm:rounded-[28px] border border-white/10 bg-slate-950/50 backdrop-blur-2xl shadow-glow transition-all duration-300;
+}
+
+.glass-panel:hover {
+  border-color: rgba(130, 240, 255, 0.18);
+}
+
+.neon-ring {
+  box-shadow: 0 0 0 1px rgba(130, 240, 255, 0.22), 0 0 32px rgba(127, 62, 255, 0.18);
+}
+
+.gold-panel {
+  box-shadow:
+    0 0 0 1px rgba(255, 214, 140, 0.14),
+    0 18px 60px rgba(8, 18, 42, 0.5),
+    inset 0 1px 0 rgba(255, 236, 195, 0.08);
+  border-color: rgba(255, 214, 140, 0.16);
+}

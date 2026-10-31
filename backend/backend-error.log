@@ -1,0 +1,3 @@
+INFO:     Will watch for changes in these directories: ['C:\\xampp\\htdocs\\air_scribe.ai\\backend']
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+INFO:     Started reloader process [8376] using WatchFiles
